@@ -43,13 +43,24 @@
 
                                             let result='' ; 
                                             if (computerMove==='Rock' ) { 
-                                                result='Tie' ; } else if (computerMove==='Paper' ) { 
-                                                    result='You Lose' ;
+                                                result='You win' ; } else if (computerMove==='Paper' ) { 
+                                                    result='Tie' ;
                                                 } else if (computerMove==='Scissors' ) { 
-                                                    result='You win' ; }
+                                                    result='You lose' ; }
                                                     
                                                     alert(`You picked Paper. Computer picked ${computerMove}.${result}`)">Paper</button>
-    <button onclick=" pickComputerMove(); resultMove(); ">Scissors</button>
+    <button onclick=" pickComputerMove();
+    let result = '';
+    
+     if (computerMove === 'Rock') {
+                result = 'You lose';
+            } else if (computerMove === 'Paper') {
+                result = 'You win';
+            } else if (computerMove === 'Scissors') {
+                result = 'Tie';
+            }
+            alert(`You picked Scissors. Computer picked ${computerMove}.${result}`)
+        ">Scissors</button>
 
 
     <script>
@@ -69,20 +80,6 @@
 
         }
 
-        let result = '';
-
-        function resultMove() {
-
-            if (computerMove === 'Rock') {
-                result = 'Tie';
-            } else if (computerMove === 'Paper') {
-                result = 'You Lose';
-            } else if (computerMove === 'Scissors') {
-                result = 'You win';
-            }
-
-            alert(`You picked Scissors. Computer picked ${computerMove}.${result}`)
-        }
     </script>
 </body>
 
