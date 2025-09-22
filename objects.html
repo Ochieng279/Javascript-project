@@ -23,11 +23,27 @@
         product.name = 'T-shirt';
         console.log(product);
         */
+
         const product2 = {
-            name: 'cotton'
+            name: 'cotton',
+            delivery_time: '1 day',
+            rating: {
+                stars: 4.5,
+                count: 87
+            },
+            fun: function function1() {
+                console.log('function inside object');
+            }
         };
 
-        console.log(product2);
+        console.log(product2.rating.count);
+        product2.fun();
+
+        console.log(JSON.stringify(product2));
+
+        const jsonString = JSON.stringify(product2)
+        console.log(JSON.parse(jsonString));
+
     </script>
 </body>
 
